@@ -54,7 +54,30 @@ guitarPlayer.play()
  print("ギターでエラーが発生ました！")
         }
     }
-
+//バックミュージックの音源ファイルの指定
+let backmusicPath = Bundle.main.bundleURL.appendingPathComponent("backmusic.mp3")
     
+//バックミュージック用のプレイヤーインスタンスを作成
+var backmusicPlayer = AVAudioPlayer()
+    
+    @IBAction func play(_ sender: Any) {
+    
+        do{
+//バックミュージック用のぴプレイヤーに音源ファイルを指定
+backmusicPlayer = try AVAudioPlayer(contentsOf: backmusicPath, fileTypeHint: nil)
+            
+//リピート設定
+backmusicPlayer.numberOfLoops = -1
+backmusicPlayer.play()
+        }catch{
+    print("エラーが発生しました！")
+        }
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+
+//バックミュージックの停止
+backmusicPlayer.stop()
+    }
 }
 

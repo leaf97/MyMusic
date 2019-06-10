@@ -34,6 +34,9 @@
                                 <state key="normal" title="Play">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SaJ-qq-Pyy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTS-2U-F7a">
                                 <rect key="frame" x="256.5" y="504" width="61" height="48"/>
@@ -48,6 +51,7 @@
                                 <connections>
                                     <action selector="cymbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jj6-hH-wYc"/>
                                     <action selector="guitar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dG4-Vl-16f"/>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e87-j4-3Gm"/>
                                 </connections>
                             </button>
                         </subviews>
